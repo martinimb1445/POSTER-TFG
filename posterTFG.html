@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Póster - Sistema Tally IP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .poster-container {
+            background-color: #ffffff;
+            width: 800px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 15px solid #0056b3;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #0056b3;
+            font-size: 2.2em;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+        .header h2 {
+            color: #555;
+            font-size: 1.2em;
+            font-weight: 400;
+            margin: 0 0 15px 0;
+        }
+        .authors {
+            font-weight: bold;
+            color: #222;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .section-title {
+            background-color: #0056b3;
+            color: white;
+            padding: 8px 15px;
+            font-size: 1.2em;
+            border-radius: 4px;
+            margin-top: 0;
+        }
+        .box {
+            background-color: #fdfdfd;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .image-placeholder {
+            background-color: #e9ecef;
+            border: 2px dashed #adb5bd;
+            text-align: center;
+            padding: 40px 20px;
+            color: #6c757d;
+            font-weight: bold;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster-container">
+        <div class="header">
+            <h1>Sistema de Luces Tally para Producción IP</h1>
+            <h2>Control Visual Inalámbrico con Seguimiento Pan/Tilt Integrado</h2>
+            <p class="authors">Autores: Christian Imbaquingo y Barila Sota | Centro Académico: IES Pacífico</p>
+        </div>
+
+        <div class="grid-container">
+            <!-- Columna Izquierda -->
+            <div class="column">
+                <div class="box">
+                    <h3 class="section-title">1. El Reto</h3>
+                    <p>En la producción audiovisual IP, los operadores necesitan saber en tiempo real qué cámara está en <strong>Program</strong> o <strong>Preview</strong>. El objetivo es democratizar esta tecnología con una solución open-source, inalámbrica y de baja latencia frente a los costosos sistemas comerciales.</p>
+                </div>
+
+                <div class="box" style="margin-top: 30px;">
+                    <h3 class="section-title">2. Arquitectura de Hardware</h3>
+                    <ul>
+                        <li><strong>Unidad de Captura:</strong> Módulos ESP32-CAM que procesan las señales de red y activan los LEDs Tally.</li>
+                        <li><strong>Mecánica:</strong> Sistema Pan/Tilt impulsado por servomotores SG90 para encuadre remoto.</li>
+                        <li><strong>Chasis a Medida:</strong> Diseño de soportes en impresión 3D sin adhesivos permanentes, con ajuste por fricción (Dual Lock / Masilla Inofix).</li>
+                        <li><strong>Unidad Central:</strong> Raspberry Pi para la orquestación del sistema.</li>
+                    </ul>
+                    <div class="image-placeholder">
+                        [ESPACIO PARA PEGAR LA FOTO DEL MONTAJE DEL SERVO Y LA CÁMARA]
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="column">
+                <div class="box">
+                    <h3 class="section-title">3. Software y Comunicaciones</h3>
+                    <ul>
+                        <li><strong>Conectividad:</strong> Infraestructura Wi-Fi local para máxima estabilidad.</li>
+                        <li><strong>Lógica backend:</strong> Desarrollada en Python para el control concurrente de nodos.</li>
+                        <li><strong>Protocolo:</strong> Uso de sockets IP para latencia casi nula.</li>
+                    </ul>
+                </div>
+
+                <div class="box" style="margin-top: 30px;">
+                    <h3 class="section-title">4. Resultados Clave</h3>
+                    <ul>
+                        <li><strong>Latencia Nula:</strong> Respuesta instantánea al cambiar de plano.</li>
+                        <li><strong>Estabilidad Mecánica:</strong> Movimientos fluidos del eje Pan/Tilt gracias al anclaje híbrido.</li>
+                        <li><strong>Despliegue Rápido:</strong> Nodos totalmente inalámbricos.</li>
+                    </ul>
+                </div>
+
+                <div class="box" style="margin-top: 30px;">
+                    <h3 class="section-title">5. Futuras Implementaciones</h3>
+                    <ul>
+                        <li>Diseño de una <strong>Power Distribution Board</strong> dedicada para los picos de los motores.</li>
+                        <li>Implementación de reglas <strong>QoS (Quality of Service)</strong> para prioridad de red.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Proyecto presentado para Concurso de Innovación Tecnológica | IES Pacífico
+        </div>
+    </div>
+
+</body>
+</html>
